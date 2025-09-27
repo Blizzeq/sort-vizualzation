@@ -118,9 +118,6 @@ export default function Home() {
                 Jakub Krasuski
               </a>
             </p>
-            <p className="text-xs text-gray-500">
-              Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion
-            </p>
           </div>
         </motion.footer>
 

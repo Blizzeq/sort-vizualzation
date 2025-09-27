@@ -241,59 +241,27 @@ export const SortingCanvas = memo(function SortingCanvas() {
       
       <CardContent>
         <div className="w-full overflow-x-auto">
-          {array.length > 50 && !realSpeedMode && (
-            <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700">
-              <p className="font-medium">💡 Large array ({array.length} elements)</p>
-              <p>Labels have been hidden for better readability. You can scroll horizontally to see the full array.</p>
+          <LayoutGroup>
+            <div 
+              className="flex items-end justify-center gap-1 mx-auto bg-gradient-to-b from-slate-50 to-slate-100 rounded-lg p-6"
+              style={{ 
+                width: containerWidth,
+                height: shouldShowLabels ? maxHeight + 80 : maxHeight + 20
+              }}
+            >
+              {array.map((element, index) => (
+                <ArrayBar
+                  key={`bar-${element.value}-${index}`}
+                  element={element}
+                  maxValue={maxValue}
+                  maxHeight={maxHeight}
+                  width={barWidth}
+                  index={index}
+                  showLabels={shouldShowLabels}
+                />
+              ))}
             </div>
-          )}
-
-          {realSpeedMode && array.length > 100 && (
-            <div className="mb-4 p-3 bg-purple-50 border border-purple-200 rounded-lg text-sm text-purple-700">
-              <p className="font-medium">⚡ Real Speed Mode ({array.length.toLocaleString()} elements)</p>
-              <p>
-                {array.length > 1000 
-                  ? "Visualization disabled for performance. Check statistics for execution time."
-                  : "Large array visualization - labels hidden for performance."
-                }
-              </p>
-            </div>
-          )}
-          
-          {(!realSpeedMode || array.length <= 1000) && (
-            <LayoutGroup>
-              <div 
-                className="flex items-end justify-center gap-1 mx-auto bg-gradient-to-b from-slate-50 to-slate-100 rounded-lg p-6"
-                style={{ 
-                  width: containerWidth,
-                  height: shouldShowLabels ? maxHeight + 80 : maxHeight + 20
-                }}
-              >
-                {array.map((element, index) => (
-                  <ArrayBar
-                    key={`bar-${element.value}-${index}`}
-                    element={element}
-                    maxValue={maxValue}
-                    maxHeight={maxHeight}
-                    width={barWidth}
-                    index={index}
-                    showLabels={shouldShowLabels}
-                  />
-                ))}
-              </div>
-            </LayoutGroup>
-          )}
-
-          {realSpeedMode && array.length > 1000 && (
-            <div className="flex items-center justify-center h-40 bg-gradient-to-b from-slate-50 to-slate-100 rounded-lg">
-              <div className="text-center">
-                <p className="text-lg font-medium text-gray-600">Array too large for visualization</p>
-                <p className="text-sm text-gray-500 mt-1">
-                  {array.length.toLocaleString()} elements - check Statistics panel for results
-                </p>
-              </div>
-            </div>
-          )}
+          </LayoutGroup>
         </div>
         
         {/* Legend */}

@@ -14,6 +14,7 @@ const algorithms: AlgorithmType[] = ['bubble', 'insertion', 'selection', 'quick'
 export function AlgorithmShowcase() {
   const [currentAlgorithm, setCurrentAlgorithm] = useState<AlgorithmType>('bubble');
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [intervalDuration, setIntervalDuration] = useState(4000);
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -23,26 +24,31 @@ export function AlgorithmShowcase() {
         const currentIndex = algorithms.indexOf(prev);
         return algorithms[(currentIndex + 1) % algorithms.length];
       });
-    }, 4000);
+      // Reset to normal duration after each auto change
+      setIntervalDuration(4000);
+    }, intervalDuration);
 
     return () => clearInterval(interval);
-  }, [isAutoPlay]);
+  }, [isAutoPlay, intervalDuration]);
 
   const nextAlgorithm = () => {
-    setIsAutoPlay(false);
     const currentIndex = algorithms.indexOf(currentAlgorithm);
     setCurrentAlgorithm(algorithms[(currentIndex + 1) % algorithms.length]);
+    // Extend the interval when user manually navigates
+    setIntervalDuration(8000);
   };
 
   const prevAlgorithm = () => {
-    setIsAutoPlay(false);
     const currentIndex = algorithms.indexOf(currentAlgorithm);
     setCurrentAlgorithm(algorithms[(currentIndex - 1 + algorithms.length) % algorithms.length]);
+    // Extend the interval when user manually navigates
+    setIntervalDuration(8000);
   };
 
   const selectAlgorithm = (algorithm: AlgorithmType) => {
-    setIsAutoPlay(false);
     setCurrentAlgorithm(algorithm);
+    // Extend the interval when user manually selects
+    setIntervalDuration(8000);
   };
 
   const currentInfo = ALGORITHM_INFO[currentAlgorithm];
@@ -70,8 +76,8 @@ export function AlgorithmShowcase() {
 
       {/* Main Algorithm Display */}
       <Card className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border-2">
-        <CardContent className="p-6">
-          <div className="flex items-center justify-between mb-4">
+        <CardContent className="p-8">
+          <div className="flex items-center justify-between mb-6">
             <motion.div
               key={currentAlgorithm}
               initial={{ opacity: 0, x: 20 }}
@@ -79,14 +85,14 @@ export function AlgorithmShowcase() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-3"
             >
-              <div className="p-2 bg-blue-600 rounded-lg">
-                <Play className="w-5 h-5 text-white" />
+              <div className="p-3 bg-blue-600 rounded-lg">
+                <Play className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-3xl font-bold text-gray-900">
                   {currentInfo.name}
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-base text-gray-600">
                   Average: {currentInfo.timeComplexity.average}
                 </p>
               </div>
@@ -97,23 +103,23 @@ export function AlgorithmShowcase() {
                 variant="outline"
                 size="sm"
                 onClick={prevAlgorithm}
-                className="h-8 w-8 p-0"
+                className="h-10 w-10 p-0"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-5 h-5" />
               </Button>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={nextAlgorithm}
-                className="h-8 w-8 p-0"
+                className="h-10 w-10 p-0"
               >
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
           </div>
 
-          {/* Fixed height container to prevent jumping */}
-          <div className="min-h-[280px]">
+          {/* Content container with natural height */}
+          <div className="min-h-[320px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentAlgorithm}
@@ -128,30 +134,30 @@ export function AlgorithmShowcase() {
                   <MiniVisualization algorithm={currentAlgorithm} />
                 </div>
 
-                {/* Algorithm Description - Fixed height with scrolling if needed */}
-                <div className="h-[60px] overflow-hidden">
-                  <p className="text-gray-700 leading-relaxed text-sm">
+                {/* Algorithm Description */}
+                <div>
+                  <p className="text-gray-700 leading-relaxed text-base">
                     {currentInfo.description}
                   </p>
                 </div>
 
                 {/* Properties */}
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="bg-green-50 border-green-200">
+                <div className="grid grid-cols-3 gap-3">
+                  <Badge variant="outline" className="bg-green-50 border-green-200 text-sm py-2 px-3 justify-center">
                     Best: {currentInfo.timeComplexity.best}
                   </Badge>
-                  <Badge variant="outline" className="bg-blue-50 border-blue-200">
+                  <Badge variant="outline" className="bg-blue-50 border-blue-200 text-sm py-2 px-3 justify-center">
                     Avg: {currentInfo.timeComplexity.average}
                   </Badge>
-                  <Badge variant="outline" className="bg-red-50 border-red-200">
+                  <Badge variant="outline" className="bg-red-50 border-red-200 text-sm py-2 px-3 justify-center">
                     Worst: {currentInfo.timeComplexity.worst}
                   </Badge>
-                  <Badge variant="outline" className="bg-purple-50 border-purple-200">
+                  <Badge variant="outline" className="bg-purple-50 border-purple-200 text-sm py-2 px-3 justify-center">
                     Space: {currentInfo.spaceComplexity}
                   </Badge>
                   <Badge 
                     variant="outline" 
-                    className={currentInfo.stable ? "bg-emerald-50 border-emerald-200" : "bg-orange-50 border-orange-200"}
+                    className={`text-sm py-2 px-3 justify-center ${currentInfo.stable ? "bg-emerald-50 border-emerald-200" : "bg-orange-50 border-orange-200"}`}
                   >
                     {currentInfo.stable ? "Stable" : "Unstable"}
                   </Badge>
@@ -179,7 +185,7 @@ export function AlgorithmShowcase() {
 }
 
 function MiniVisualization({ algorithm }: { algorithm: AlgorithmType }) {
-  const [bars] = useState([8, 3, 5, 4, 7, 6, 1, 2]);
+  const [bars] = useState([12, 4, 8, 6, 11, 9, 2, 5, 10, 7, 3, 1]);
   const [activeIndices, setActiveIndices] = useState<number[]>([]);
 
   useEffect(() => {
@@ -190,19 +196,19 @@ function MiniVisualization({ algorithm }: { algorithm: AlgorithmType }) {
     const updateAnimation = () => {
       switch (algorithm) {
         case 'bubble':
-          setActiveIndices([step % 7, (step % 7) + 1]);
+          setActiveIndices([step % 11, (step % 11) + 1]);
           break;
         case 'insertion':
-          setActiveIndices([step % 8]);
+          setActiveIndices([step % 12]);
           break;
         case 'selection':
-          setActiveIndices([0, step % 8]);
+          setActiveIndices([0, step % 12]);
           break;
         case 'quick':
-          setActiveIndices([3, step % 8]); // Pivot and current
+          setActiveIndices([5, step % 12]); // Pivot and current
           break;
         case 'merge':
-          setActiveIndices(step % 2 === 0 ? [0, 1, 2, 3] : [4, 5, 6, 7]);
+          setActiveIndices(step % 2 === 0 ? [0, 1, 2, 3, 4, 5] : [6, 7, 8, 9, 10, 11]);
           break;
       }
       step++;
@@ -228,7 +234,7 @@ function MiniVisualization({ algorithm }: { algorithm: AlgorithmType }) {
   }, [algorithm]);
 
   return (
-    <div className="flex items-end justify-center gap-1 h-16">
+    <div className="flex items-end justify-center gap-2 h-32">
       {bars.map((height, index) => (
         <motion.div
           key={index}
@@ -238,8 +244,8 @@ function MiniVisualization({ algorithm }: { algorithm: AlgorithmType }) {
               : 'bg-blue-400'
           }`}
           style={{
-            width: '12px',
-            height: `${height * 6}px`,
+            width: '20px',
+            height: `${height * 10}px`,
           }}
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ 

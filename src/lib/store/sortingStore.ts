@@ -172,6 +172,11 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
             return;
           }
           
+          // Update statistics for EVERY step to ensure accurate counting
+          if (result.value) {
+            get().updateStatistics(result.value);
+          }
+          
           lastResult = result.value;
           stepsExecuted++;
           
@@ -196,9 +201,8 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
           }
         }
         
-        // Update UI with last result
+        // Update UI with last result (statistics already updated in the loop)
         if (lastResult) {
-          get().updateStatistics(lastResult);
           set({ 
             array: lastResult.array,
             currentStep: stepCount,

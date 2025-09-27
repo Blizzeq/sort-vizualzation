@@ -17,7 +17,7 @@ export const AlgorithmSelector = memo(function AlgorithmSelector() {
         onValueChange={(value: AlgorithmType) => setAlgorithm(value)}
         disabled={isDisabled}
       >
-        <SelectTrigger className="w-full h-12 border-blue-300 bg-white/70 hover:bg-white focus:ring-blue-500 focus:border-blue-500">
+        <SelectTrigger className="w-full h-12 border-blue-300 bg-white/70 hover:bg-white focus:ring-blue-500 focus:border-blue-500 py-6">
           <SelectValue placeholder="Select algorithm" />
         </SelectTrigger>
         <SelectContent className="border-blue-300 bg-white/95 backdrop-blur-sm">

@@ -32,8 +32,8 @@ const getBarGradient = (state: ArrayElement['state']) => {
 const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, width, index, showLabels = true }: ArrayBarProps) {
   
   const height = Math.max((element.value / maxValue) * maxHeight, 20);
-  const shouldShowValue = showLabels && width > 20;
-  const shouldShowIndex = showLabels && width > 15;
+  const shouldShowValue = showLabels;
+  const shouldShowIndex = showLabels;
   
   // Performance optimization for large arrays
   const isLargeArray = index > 50;

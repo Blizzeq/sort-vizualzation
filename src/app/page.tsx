@@ -113,7 +113,14 @@ export default function Home() {
         >
           <div className="space-y-2">
             <p className="text-sm text-gray-600">
-              Created by <span className="font-semibold text-blue-600">Jakub Krasuski</span>
+              Created by <a 
+                href="https://www.linkedin.com/in/krasuski-jakub99/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-semibold text-blue-600 hover:text-blue-800 transition-colors underline decoration-blue-300 hover:decoration-blue-500"
+              >
+                Jakub Krasuski
+              </a>
             </p>
             <p className="text-xs text-gray-500">
               Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion

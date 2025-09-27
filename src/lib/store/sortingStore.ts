@@ -67,7 +67,7 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     arrayAccesses: 0,
   },
   speed: 100,
-  arraySize: 30,
+  arraySize: 25,
   currentStep: 0,
   totalSteps: 0,
   currentMessage: 'Ready to sort',
@@ -128,7 +128,6 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     let lastTime = 0;
     let frameCount = 0;
     let fpsLastTime = 0;
-    const stepInterval = 1100 - get().speed * 10;
     
     const animate = (currentTime: number) => {
       const state = get();
@@ -149,6 +148,8 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
           fpsLastTime = currentTime;
         }
         
+        // Dynamic speed calculation
+        const stepInterval = 1100 - state.speed * 10;
         if (currentTime - lastTime >= stepInterval) {
           state.executeNextStep();
           lastTime = currentTime;
@@ -184,7 +185,6 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
       let lastTime = 0;
       let frameCount = 0;
       let fpsLastTime = 0;
-      const stepInterval = 1100 - get().speed * 10;
       
       const animate = (currentTime: number) => {
         const currentState = get();
@@ -205,6 +205,8 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
             fpsLastTime = currentTime;
           }
           
+          // Dynamic speed calculation
+          const stepInterval = 1100 - currentState.speed * 10;
           if (currentTime - lastTime >= stepInterval) {
             currentState.executeNextStep();
             lastTime = currentTime;

@@ -17,14 +17,14 @@ export const ArraySizeSlider = memo(function ArraySizeSlider() {
         value={[arraySize]}
         onValueChange={([value]) => setArraySize(value)}
         min={10}
-        max={100}
+        max={50}
         step={5}
         disabled={isDisabled}
         className="w-full"
       />
       <div className="flex justify-between text-xs text-muted-foreground">
         <span>10</span>
-        <span>100</span>
+        <span>50</span>
       </div>
     </div>
   );

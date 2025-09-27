@@ -18,23 +18,28 @@ export const SortingCanvas = memo(function SortingCanvas() {
     
     // Dynamic container width based on screen size and array length
     const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
-    const maxContainerWidth = Math.min(screenWidth - 100, 1400);
+    const maxContainerWidth = Math.min(screenWidth - 50, 1600);
     
-    // Minimum bar width for readability
-    const minBarWidth = array.length > 50 ? 8 : 12;
-    const idealBarWidth = array.length > 50 ? 12 : 20;
+    // Always show labels for arrays up to 50 elements
+    const showLabels = array.length <= 50;
     
-    // First calculate if we should show labels
-    const tempBarW = Math.max(minBarWidth, (maxContainerWidth - 80) / array.length);
-    const showLabels = array.length <= 50 && tempBarW >= 15;
+    // Calculate bar width and container width to ensure everything fits
+    const minBarWidth = 12;
+    const idealBarWidth = array.length <= 25 ? 24 : 20;
+    const gap = 4; // gap between bars (matches gap-1 in CSS)
     
-    // Calculate optimal width with appropriate padding
-    const paddingForLabels = showLabels ? 80 : 40;
-    const idealContainerWidth = array.length * idealBarWidth + paddingForLabels;
-    const containerW = Math.min(maxContainerWidth, Math.max(400, idealContainerWidth));
+    // Calculate required width with generous padding for labels
+    const paddingForLabels = showLabels ? 120 : 60;
+    const totalBarsWidth = array.length * idealBarWidth;
+    const totalGapsWidth = (array.length - 1) * gap;
+    const idealContainerWidth = totalBarsWidth + totalGapsWidth + paddingForLabels;
+    
+    // Ensure container is wide enough - don't limit by screen width for better visualization
+    const containerW = Math.max(idealContainerWidth, 600);
     
     // Calculate actual bar width
-    const barW = Math.max(minBarWidth, (containerW - paddingForLabels) / array.length);
+    const availableWidthForBars = containerW - paddingForLabels - totalGapsWidth;
+    const barW = Math.max(minBarWidth, availableWidthForBars / array.length);
     
     return { 
       maxValue: max, 

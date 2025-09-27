@@ -29,10 +29,16 @@ const getBarGradient = (state: ArrayElement['state']) => {
   }
 };
 
-export const ArrayBar = memo(function ArrayBar({ element, maxValue, maxHeight, width, index, showLabels = true }: ArrayBarProps) {
+const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, width, index, showLabels = true }: ArrayBarProps) {
+  
   const height = Math.max((element.value / maxValue) * maxHeight, 20);
   const shouldShowValue = showLabels && width > 20;
   const shouldShowIndex = showLabels && width > 15;
+  
+  // Performance optimization for large arrays
+  const isLargeArray = index > 50;
+  const animationDelay = isLargeArray ? 0 : index * 0.005;
+  const shouldUseLayout = !isLargeArray;
 
   return (
     <motion.div
@@ -41,25 +47,28 @@ export const ArrayBar = memo(function ArrayBar({ element, maxValue, maxHeight, w
         width: width, 
         minHeight: showLabels ? maxHeight + 40 : maxHeight + 10 
       }}
-      layoutId={`bar-${element.value}-${index}`}
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ 
-        type: "spring",
-        stiffness: 300,
-        damping: 25,
-        delay: index * 0.01
-      }}
+      layoutId={shouldUseLayout ? `bar-${element.value}-${index}` : undefined}
+      initial={isLargeArray ? { opacity: 0 } : { scale: 0.8, opacity: 0 }}
+      animate={isLargeArray ? { opacity: 1 } : { scale: 1, opacity: 1 }}
+      exit={isLargeArray ? { opacity: 0 } : { scale: 0.8, opacity: 0 }}
+      transition={isLargeArray ? 
+        { duration: 0.2, delay: animationDelay } :
+        { 
+          type: "spring",
+          stiffness: 400,
+          damping: 30,
+          delay: animationDelay
+        }
+      }
     >
       {/* Value label */}
       {shouldShowValue && (
         <motion.div 
           className="text-xs text-center mb-1 font-mono"
-          layoutId={`value-${element.value}-${index}`}
+          layoutId={shouldUseLayout ? `value-${element.value}-${index}` : undefined}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.01 + 0.2 }}
+          transition={{ delay: animationDelay + 0.1, duration: isLargeArray ? 0.15 : 0.3 }}
         >
           {element.value}
         </motion.div>
@@ -72,30 +81,46 @@ export const ArrayBar = memo(function ArrayBar({ element, maxValue, maxHeight, w
           width: Math.max(width - 2, 6),
           minWidth: 6
         }}
-        layoutId={`bar-content-${element.value}-${index}`}
+        layoutId={shouldUseLayout ? `bar-content-${element.value}-${index}` : undefined}
         animate={{ 
           height: height,
           scale: element.state === 'comparing' || element.state === 'swapping' ? 1.05 : 1
         }}
-        transition={{ 
-          height: { type: "spring", stiffness: 400, damping: 30 },
-          scale: { type: "spring", stiffness: 600, damping: 25 },
-          layout: { type: "spring", stiffness: 400, damping: 30 }
-        }}
+        transition={isLargeArray ? 
+          { 
+            height: { duration: 0.3 },
+            scale: { duration: 0.2 }
+          } :
+          { 
+            height: { type: "spring", stiffness: 400, damping: 30 },
+            scale: { type: "spring", stiffness: 600, damping: 25 },
+            layout: { type: "spring", stiffness: 400, damping: 30 }
+          }
+        }
       />
       
       {/* Index label */}
       {shouldShowIndex && (
         <motion.div 
           className="text-xs text-muted-foreground mt-1 font-mono"
-          layoutId={`index-${element.value}-${index}`}
+          layoutId={shouldUseLayout ? `index-${element.value}-${index}` : undefined}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.01 + 0.3 }}
+          transition={{ delay: animationDelay + 0.15, duration: isLargeArray ? 0.15 : 0.3 }}
         >
           {index}
         </motion.div>
       )}
     </motion.div>
+  );
+};
+
+export const ArrayBar = memo(ArrayBarComponent, (prevProps, nextProps) => {
+  return !(
+    prevProps.element.state === nextProps.element.state &&
+    prevProps.element.value === nextProps.element.value &&
+    prevProps.maxValue === nextProps.maxValue &&
+    prevProps.width === nextProps.width &&
+    prevProps.showLabels === nextProps.showLabels
   );
 });

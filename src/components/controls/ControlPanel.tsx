@@ -1,5 +1,6 @@
 'use client';
 
+import { useCallback, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useSortingStore } from '@/lib/store/sortingStore';
@@ -19,7 +20,7 @@ export function ControlPanel() {
     nextStep
   } = useSortingStore();
 
-  const handlePlayPause = () => {
+  const handlePlayPause = useCallback(() => {
     if (sortingState === 'idle' || sortingState === 'completed') {
       startSorting();
     } else if (sortingState === 'sorting') {
@@ -27,19 +28,19 @@ export function ControlPanel() {
     } else if (sortingState === 'paused') {
       resumeSorting();
     }
-  };
+  }, [sortingState, startSorting, pauseSorting, resumeSorting]);
 
-  const getPlayButtonText = () => {
+  const playButtonText = useMemo(() => {
     if (sortingState === 'idle' || sortingState === 'completed') return 'Start';
     if (sortingState === 'sorting') return 'Pause';
     if (sortingState === 'paused') return 'Resume';
     return 'Start';
-  };
+  }, [sortingState]);
 
-  const getPlayButtonIcon = () => {
+  const playButtonIcon = useMemo(() => {
     if (sortingState === 'sorting') return <Pause className="w-4 h-4" />;
     return <Play className="w-4 h-4" />;
-  };
+  }, [sortingState]);
 
   return (
     <Card className="w-full">
@@ -105,8 +106,8 @@ export function ControlPanel() {
                 size="lg"
                 className="w-full flex items-center gap-2 bg-green-600 hover:bg-green-700"
               >
-                {getPlayButtonIcon()}
-                {getPlayButtonText()}
+                {playButtonIcon}
+                {playButtonText}
               </Button>
 
               <div className="grid grid-cols-2 gap-2">

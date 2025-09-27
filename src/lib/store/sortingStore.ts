@@ -19,10 +19,14 @@ interface SortingStore {
   currentStep: number;
   totalSteps: number;
   currentMessage: string;
+  performanceData: {
+    fps: number;
+    frameTime: number;
+  };
   
   // Generator and animation
   sortingGenerator: SortingGenerator | null;
-  animationId: NodeJS.Timeout | null;
+  animationId: number | null;
   
   // Actions
   setAlgorithm: (algorithm: AlgorithmType) => void;
@@ -67,6 +71,10 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
   currentStep: 0,
   totalSteps: 0,
   currentMessage: 'Ready to sort',
+  performanceData: {
+    fps: 60,
+    frameTime: 16.67,
+  },
   sortingGenerator: null,
   animationId: null,
 
@@ -117,22 +125,53 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
       statistics: { ...get().statistics, timeElapsed: 0 }
     });
     
-    const animate = () => {
+    let lastTime = 0;
+    let frameCount = 0;
+    let fpsLastTime = 0;
+    const stepInterval = 1100 - get().speed * 10;
+    
+    const animate = (currentTime: number) => {
       const state = get();
       if (state.sortingState === 'sorting') {
-        state.executeNextStep();
-        const animationId = setTimeout(animate, 1100 - state.speed * 10);
+        // Performance monitoring
+        frameCount++;
+        const frameTime = currentTime - lastTime;
+        if (fpsLastTime === 0) fpsLastTime = currentTime;
+        if (currentTime - fpsLastTime >= 1000) {
+          const fps = Math.round((frameCount * 1000) / (currentTime - fpsLastTime));
+          set({ 
+            performanceData: { 
+              fps, 
+              frameTime: Math.round(frameTime * 100) / 100 
+            } 
+          });
+          frameCount = 0;
+          fpsLastTime = currentTime;
+        }
+        
+        if (currentTime - lastTime >= stepInterval) {
+          state.executeNextStep();
+          lastTime = currentTime;
+          
+          // Check if state changed after executeNextStep
+          const newState = get();
+          if (newState.sortingState !== 'sorting') {
+            return; // Don't schedule next frame
+          }
+        }
+        const animationId = requestAnimationFrame(animate);
         set({ animationId });
       }
     };
     
-    animate();
+    const animationId = requestAnimationFrame(animate);
+    set({ animationId });
   },
 
   pauseSorting: () => {
     const { animationId } = get();
     if (animationId) {
-      clearTimeout(animationId);
+      cancelAnimationFrame(animationId);
       set({ sortingState: 'paused', animationId: null });
     }
   },
@@ -142,23 +181,48 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     if (state.sortingState === 'paused') {
       set({ sortingState: 'sorting' });
       
-      const animate = () => {
+      let lastTime = 0;
+      let frameCount = 0;
+      let fpsLastTime = 0;
+      const stepInterval = 1100 - get().speed * 10;
+      
+      const animate = (currentTime: number) => {
         const currentState = get();
         if (currentState.sortingState === 'sorting') {
-          currentState.executeNextStep();
-          const animationId = setTimeout(animate, 1100 - currentState.speed * 10);
+          // Performance monitoring
+          frameCount++;
+          const frameTime = currentTime - lastTime;
+          if (fpsLastTime === 0) fpsLastTime = currentTime;
+          if (currentTime - fpsLastTime >= 1000) {
+            const fps = Math.round((frameCount * 1000) / (currentTime - fpsLastTime));
+            set({ 
+              performanceData: { 
+                fps, 
+                frameTime: Math.round(frameTime * 100) / 100 
+              } 
+            });
+            frameCount = 0;
+            fpsLastTime = currentTime;
+          }
+          
+          if (currentTime - lastTime >= stepInterval) {
+            currentState.executeNextStep();
+            lastTime = currentTime;
+          }
+          const animationId = requestAnimationFrame(animate);
           set({ animationId });
         }
       };
       
-      animate();
+      const animationId = requestAnimationFrame(animate);
+      set({ animationId });
     }
   },
 
   resetSorting: () => {
     const { animationId, originalArray } = get();
     if (animationId) {
-      clearTimeout(animationId);
+      cancelAnimationFrame(animationId);
     }
     
     get().initializeArray(originalArray);
@@ -233,7 +297,7 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
       // Sorting completed
       const { animationId } = get();
       if (animationId) {
-        clearTimeout(animationId);
+        cancelAnimationFrame(animationId);
       }
       
       // Ensure all elements are marked as sorted
@@ -251,17 +315,42 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     } else {
       // Update with new step
       const step = result.value;
-      get().updateStatistics(step);
       
-      set({ 
-        array: step.array,
-        currentStep: currentStep + 1,
-        currentMessage: step.message,
-        statistics: {
-          ...get().statistics,
-          timeElapsed: Date.now() - (Date.now() - currentStep * (1100 - get().speed * 10))
+      // Check if this is the final sorting step
+      if (step.message === 'Array is fully sorted!') {
+        // Cancel animation first
+        const { animationId } = get();
+        if (animationId) {
+          cancelAnimationFrame(animationId);
         }
-      });
+        
+        // Ensure all elements are marked as sorted
+        const finalArray = step.array.map((element: ArrayElement) => ({
+          ...element,
+          state: 'sorted' as const
+        }));
+        
+        set({ 
+          array: finalArray,
+          sortingState: 'completed',
+          currentMessage: step.message,
+          animationId: null,
+          currentStep: currentStep + 1
+        });
+      } else {
+        // Regular step processing
+        get().updateStatistics(step);
+        
+        set({ 
+          array: step.array,
+          currentStep: currentStep + 1,
+          currentMessage: step.message,
+          statistics: {
+            ...get().statistics,
+            timeElapsed: Date.now() - (Date.now() - currentStep * (1100 - get().speed * 10))
+          }
+        });
+      }
     }
   },
 }));

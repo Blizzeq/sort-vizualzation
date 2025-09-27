@@ -1,0 +1,602 @@
+Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=23, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=23, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=31, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=31, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=46, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=46, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 10: value=241, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 10: value=241, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 11: value=165, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 11: value=165, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 12: value=186, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 12: value=186, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 13: value=48, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 13: value=48, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 14: value=216, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 14: value=216, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 15: value=300, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 15: value=300, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 16: value=117, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 16: value=117, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 17: value=168, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 17: value=168, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 18: value=232, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 18: value=232, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 19: value=290, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 19: value=290, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 20: value=248, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 20: value=248, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 21: value=112, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 21: value=112, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 22: value=152, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 22: value=152, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 23: value=44, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 23: value=44, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 24: value=83, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 24: value=83, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 25: value=97, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 25: value=97, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 26: value=98, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 26: value=98, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 27: value=204, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 27: value=204, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 28: value=276, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 28: value=276, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 29: value=173, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 29: value=173, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=113, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=113, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=61, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=61, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=280, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=280, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 10: value=135, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 10: value=135, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 11: value=209, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 11: value=209, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 12: value=119, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 12: value=119, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 13: value=83, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 13: value=83, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 14: value=191, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 14: value=191, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 15: value=262, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 15: value=262, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 16: value=284, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 16: value=284, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 17: value=119, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 17: value=119, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 18: value=64, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 18: value=64, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 19: value=117, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 19: value=117, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 20: value=300, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 20: value=300, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 21: value=196, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 21: value=196, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 22: value=13, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 22: value=13, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 23: value=281, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 23: value=281, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 24: value=64, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 24: value=64, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=295, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=295, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=143, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=143, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=71, state=normal
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=71, state=normal
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 0
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'First element is already sorted', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "First element is already sorted"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:sorted', '291:normal', '21:normal', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 1
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 291 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 291 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:sorted', '291:pivot', '21:normal', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 2
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 291', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 291"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:comparing', '291:comparing', '21:normal', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 3
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 291 inserted at position 1', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 291 inserted at position 1"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:sorted', '291:sorted', '21:normal', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 4
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 21 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 21 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:sorted', '291:sorted', '21:pivot', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 5
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 21', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 21"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:sorted', '291:comparing', '21:comparing', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 6
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 2', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 2"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:sorted', '291:swapping', '21:swapping', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 7
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 21', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 21"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:comparing', '291:normal', '291:comparing', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 8
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 228 to position 1', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 228 to position 1"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['228:swapping', '291:swapping', '291:comparing', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 9
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 21 inserted at position 0', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 21 inserted at position 0"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:sorted', '228:sorted', '291:sorted', '16:normal', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 10
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 16 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 16 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:sorted', '228:sorted', '291:sorted', '16:pivot', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 11
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 16', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 16"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:sorted', '228:sorted', '291:comparing', '16:comparing', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 12
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 3', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 3"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:sorted', '228:sorted', '291:swapping', '16:swapping', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 13
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 16', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 16"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:sorted', '228:comparing', '291:normal', '291:comparing', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 14
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 228 to position 2', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 228 to position 2"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:sorted', '228:swapping', '291:swapping', '291:comparing', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 15
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 21 with 16', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 21 with 16"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:comparing', '228:normal', '228:swapping', '291:comparing', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 16
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 21 to position 1', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 21 to position 1"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['21:swapping', '228:swapping', '228:swapping', '291:comparing', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 17
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 16 inserted at position 0', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 16 inserted at position 0"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '228:sorted', '291:sorted', '38:normal', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 18
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 38 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 38 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '228:sorted', '291:sorted', '38:pivot', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 19
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 38', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 38"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '228:sorted', '291:comparing', '38:comparing', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 20
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 4', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 4"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '228:sorted', '291:swapping', '38:swapping', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 21
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 38', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 38"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '228:comparing', '291:normal', '291:comparing', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 22
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 228 to position 3', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 228 to position 3"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '228:swapping', '291:swapping', '291:comparing', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 23
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 21 with 38', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 21 with 38"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:comparing', '228:normal', '228:swapping', '291:comparing', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 24
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 38 inserted at position 2', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 38 inserted at position 2"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '291:sorted', '249:normal', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 25
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 249 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 249 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '291:sorted', '249:pivot', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 26
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 249', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 249"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '291:comparing', '249:comparing', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 27
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 5', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 5"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '291:swapping', '249:swapping', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 28
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 249', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 249"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:comparing', '291:normal', '291:comparing', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 29
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 249 inserted at position 4', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 249 inserted at position 4"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '249:sorted', '291:sorted', '233:normal', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 30
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 233 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 233 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '249:sorted', '291:sorted', '233:pivot', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 31
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 233', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 233"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '249:sorted', '291:comparing', '233:comparing', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 32
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 6', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 6"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '249:sorted', '291:swapping', '233:swapping', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 33
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 249 with 233', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 249 with 233"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '249:comparing', '291:normal', '291:comparing', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 34
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 249 to position 5', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 249 to position 5"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '249:swapping', '291:swapping', '291:comparing', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 35
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 233', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 233"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:comparing', '249:normal', '249:swapping', '291:comparing', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 36
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 233 inserted at position 4', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 233 inserted at position 4"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:normal', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 37
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 295 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 295 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:pivot', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:133 🔄 DEBUG MEMO 7: UPDATE because state changed normal -> pivot
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=295, state=pivot
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=295, state=pivot
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 38
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 295', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 295"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:comparing', '295:comparing', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 39
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 295 inserted at position 7', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 295 inserted at position 7"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted', '143:normal', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:133 🔄 DEBUG MEMO 7: UPDATE because state changed normal -> sorted
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=295, state=sorted
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=295, state=sorted
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 40
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 143 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 143 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted', '143:pivot', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:133 🔄 DEBUG MEMO 8: UPDATE because state changed normal -> pivot
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=143, state=pivot
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=143, state=pivot
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 41
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 295 with 143', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 295 with 143"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:comparing', '143:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 42
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 295 to position 8', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 295 to position 8"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:swapping', '143:swapping', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 43
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 143', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 143"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:comparing', '295:normal', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=295, state=comparing
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=295, state=comparing
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 44
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 7', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 7"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:sorted', '291:swapping', '295:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 45
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 249 with 143', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 249 with 143"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:comparing', '291:normal', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=291, state=swapping
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=291, state=swapping
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 46
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 249 to position 6', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 249 to position 6"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:sorted', '249:swapping', '291:swapping', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 47
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 233 with 143', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 233 with 143"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:comparing', '249:normal', '249:swapping', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 48
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 233 to position 5', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 233 to position 5"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:sorted', '233:swapping', '249:swapping', '249:swapping', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 49
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 143', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 143"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:comparing', '233:normal', '233:swapping', '249:swapping', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 50
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 228 to position 4', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 228 to position 4"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '228:swapping', '233:swapping', '233:swapping', '249:swapping', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 51
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 38 with 143', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 38 with 143"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:comparing', '228:normal', '228:swapping', '233:swapping', '249:swapping', '291:swapping', '295:comparing', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 52
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 143 inserted at position 3', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 143 inserted at position 3"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted', '71:normal']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 53
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Inserting element 71 into sorted portion', action: 'pivot'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Inserting element 71 into sorted portion"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted', '71:pivot']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:133 🔄 DEBUG MEMO 9: UPDATE because state changed normal -> pivot
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=71, state=pivot
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=71, state=pivot
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 54
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 295 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 295 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:comparing', '71:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 55
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 295 to position 9', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 295 to position 9"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:swapping', '71:swapping']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 56
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 291 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 291 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:comparing', '295:normal', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=295, state=comparing
+ArrayBar.tsx:35 🎨 DEBUG BAR 9: value=295, state=comparing
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 57
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 291 to position 8', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 291 to position 8"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:swapping', '295:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 58
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 249 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 249 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:comparing', '291:normal', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=291, state=swapping
+ArrayBar.tsx:35 🎨 DEBUG BAR 8: value=291, state=swapping
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 59
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 249 to position 7', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 249 to position 7"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:sorted', '249:swapping', '291:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 60
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 233 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 233 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:comparing', '249:normal', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=249, state=swapping
+ArrayBar.tsx:35 🎨 DEBUG BAR 7: value=249, state=swapping
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 61
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 233 to position 6', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 233 to position 6"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:sorted', '233:swapping', '249:swapping', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 62
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 228 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 228 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:comparing', '233:normal', '233:swapping', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 63
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 228 to position 5', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 228 to position 5"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:sorted', '228:swapping', '233:swapping', '233:swapping', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 64
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 143 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 143 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:comparing', '228:normal', '228:swapping', '233:swapping', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 65
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Shifting 143 to position 4', action: 'swap'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Shifting 143 to position 4"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '143:swapping', '228:swapping', '228:swapping', '233:swapping', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 66
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Comparing 38 with 71', action: 'compare'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Comparing 38 with 71"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:comparing', '143:normal', '143:swapping', '228:swapping', '233:swapping', '249:swapping', '291:swapping', '295:comparing']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 67
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Element 71 inserted at position 3', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Element 71 inserted at position 3"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']
+sortingStore.ts:374 🔄 DEBUG: Regular step - updating normally
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: sorting
+sortingStore.ts:153 🎬 DEBUG ANIMATION: About to call executeNextStep, sortingState: sorting
+sortingStore.ts:303 🔄 DEBUG: Calling generator.next(), currentStep: 68
+insertionSort.ts:91 🔧 DEBUG INSERTION: Before final cleanup, states: (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']
+insertionSort.ts:98 🔧 DEBUG INSERTION: After final cleanup, states: (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']
+insertionSort.ts:101 🔧 DEBUG INSERTION: About to yield final step with message "Array is fully sorted!"
+sortingStore.ts:306 🔄 DEBUG: Generator result: {done: false, step: 'Array is fully sorted!', action: 'sorted'}
+sortingStore.ts:342 🔄 DEBUG: Processing step - message: "Array is fully sorted!"
+sortingStore.ts:343 🔄 DEBUG: Step array states (first 10): (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']
+sortingStore.ts:348 🎯 DEBUG: DETECTED completion message - applying completion logic
+sortingStore.ts:353 🛑 DEBUG: Canceling animation from completion message branch
+sortingStore.ts:363 ✅ DEBUG: Setting final array from completion message, all states: (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']
+sortingStore.ts:159 🎬 DEBUG ANIMATION: After executeNextStep, new sortingState: completed
+sortingStore.ts:162 🛑 DEBUG ANIMATION: State changed to completed - stopping animation loop
+SortingCanvas.tsx:16 🎯 DEBUG CANVAS: Sorting completed, final array states: (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']
+SortingCanvas.tsx:16 🎯 DEBUG CANVAS: Sorting completed, final array states: (10) ['16:sorted', '21:sorted', '38:sorted', '71:sorted', '143:sorted', '228:sorted', '233:sorted', '249:sorted', '291:sorted', '295:sorted']

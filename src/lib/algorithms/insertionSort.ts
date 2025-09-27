@@ -43,6 +43,7 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
 
       if (array[j].value <= key) {
         array[j].state = 'sorted';
+        array[i].state = 'normal'; // Reset the comparing state
         break;
       }
 
@@ -57,17 +58,26 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
         message: `Shifting ${array[j].value} to position ${j + 1}`
       };
 
-      array[j + 1] = { ...array[j] };
-      array[j].state = 'sorted';
+      // Only copy the value, not the entire element with its state
+      array[j + 1].value = array[j].value;
+      array[j + 1].index = j + 1;
+      array[j].state = 'normal'; // Reset this position as it will be overwritten
       j--;
     }
 
     // Insert the key in its correct position
     array[j + 1] = { value: key, index: j + 1, state: 'sorted' };
+    
+    // Make sure the original position i is also reset if it wasn't handled above
+    if (array[i] && array[i].state !== 'sorted') {
+      array[i].state = 'normal';
+    }
 
-    // Mark all elements up to i as sorted
+    // Clean up any temporary states and mark all elements up to i as sorted
     for (let k = 0; k <= i; k++) {
-      array[k].state = 'sorted';
+      if (array[k].state !== 'sorted') {
+        array[k].state = 'sorted';
+      }
     }
 
     yield {
@@ -75,6 +85,11 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
       action: 'sorted',
       message: `Element ${key} inserted at position ${j + 1}`
     };
+  }
+
+  // Ensure all elements are marked as sorted in the final state
+  for (let k = 0; k < array.length; k++) {
+    array[k].state = 'sorted';
   }
 
   yield {

@@ -1,9 +1,10 @@
 'use client';
 
+import { memo } from 'react';
 import { Slider } from '@/components/ui/slider';
 import { useSortingStore } from '@/lib/store/sortingStore';
 
-export function ArraySizeSlider() {
+export const ArraySizeSlider = memo(function ArraySizeSlider() {
   const { arraySize, setArraySize, sortingState } = useSortingStore();
   const isDisabled = sortingState === 'sorting' || sortingState === 'paused';
 
@@ -27,4 +28,4 @@ export function ArraySizeSlider() {
       </div>
     </div>
   );
-}
+});

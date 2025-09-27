@@ -1,9 +1,10 @@
 'use client';
 
+import { memo } from 'react';
 import { Slider } from '@/components/ui/slider';
 import { useSortingStore } from '@/lib/store/sortingStore';
 
-export function SpeedControl() {
+export const SpeedControl = memo(function SpeedControl() {
   const { speed, setSpeed } = useSortingStore();
 
   return (
@@ -25,4 +26,4 @@ export function SpeedControl() {
       </div>
     </div>
   );
-}
+});

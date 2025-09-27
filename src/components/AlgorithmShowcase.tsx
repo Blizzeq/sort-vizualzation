@@ -183,39 +183,48 @@ function MiniVisualization({ algorithm }: { algorithm: AlgorithmType }) {
   const [activeIndices, setActiveIndices] = useState<number[]>([]);
 
   useEffect(() => {
-    // Simple animation to show algorithm characteristics
-    const animate = () => {
-      let step = 0;
-      const interval = setInterval(() => {
-        switch (algorithm) {
-          case 'bubble':
-            setActiveIndices([step % 7, (step % 7) + 1]);
-            break;
-          case 'insertion':
-            setActiveIndices([step % 8]);
-            break;
-          case 'selection':
-            setActiveIndices([0, step % 8]);
-            break;
-          case 'quick':
-            setActiveIndices([3, step % 8]); // Pivot and current
-            break;
-          case 'merge':
-            setActiveIndices(step % 2 === 0 ? [0, 1, 2, 3] : [4, 5, 6, 7]);
-            break;
-        }
-        step++;
-        if (step > 15) {
-          setActiveIndices([]);
-          step = 0;
-        }
-      }, 300);
-
-      return interval;
+    let step = 0;
+    let animationId: number;
+    let lastTime = 0;
+    
+    const updateAnimation = () => {
+      switch (algorithm) {
+        case 'bubble':
+          setActiveIndices([step % 7, (step % 7) + 1]);
+          break;
+        case 'insertion':
+          setActiveIndices([step % 8]);
+          break;
+        case 'selection':
+          setActiveIndices([0, step % 8]);
+          break;
+        case 'quick':
+          setActiveIndices([3, step % 8]); // Pivot and current
+          break;
+        case 'merge':
+          setActiveIndices(step % 2 === 0 ? [0, 1, 2, 3] : [4, 5, 6, 7]);
+          break;
+      }
+      step++;
+      if (step > 15) {
+        setActiveIndices([]);
+        step = 0;
+      }
     };
-
-    const interval = animate();
-    return () => clearInterval(interval);
+    
+    const animate = (currentTime: number) => {
+      if (currentTime - lastTime >= 300) { // 300ms interval
+        updateAnimation();
+        lastTime = currentTime;
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+    
+    animationId = requestAnimationFrame(animate);
+    
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
   }, [algorithm]);
 
   return (

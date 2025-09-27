@@ -1,27 +1,46 @@
 'use client';
 
-import { useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useMemo, memo } from 'react';
+import { motion, LayoutGroup } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useSortingStore } from '@/lib/store/sortingStore';
 import { ArrayBar } from './ArrayBar';
 import { ALGORITHM_INFO } from '@/lib/algorithms/types';
 
-export function SortingCanvas() {
+export const SortingCanvas = memo(function SortingCanvas() {
   const { array, algorithm, sortingState, currentMessage } = useSortingStore();
 
-  const { maxValue, containerWidth, barWidth } = useMemo(() => {
-    if (array.length === 0) return { maxValue: 1, containerWidth: 800, barWidth: 20 };
+  const { maxValue, containerWidth, barWidth, shouldShowLabels } = useMemo(() => {
+    if (array.length === 0) return { maxValue: 1, containerWidth: 800, barWidth: 20, shouldShowLabels: true };
     
     const max = Math.max(...array.map(el => el.value));
-    const containerW = Math.min(1200, Math.max(600, array.length * 30));
-    const barW = Math.max(10, (containerW - 40) / array.length);
+    
+    // Dynamic container width based on screen size and array length
+    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
+    const maxContainerWidth = Math.min(screenWidth - 100, 1400);
+    
+    // Minimum bar width for readability
+    const minBarWidth = array.length > 50 ? 8 : 12;
+    const idealBarWidth = array.length > 50 ? 12 : 20;
+    
+    // First calculate if we should show labels
+    const tempBarW = Math.max(minBarWidth, (maxContainerWidth - 80) / array.length);
+    const showLabels = array.length <= 50 && tempBarW >= 15;
+    
+    // Calculate optimal width with appropriate padding
+    const paddingForLabels = showLabels ? 80 : 40;
+    const idealContainerWidth = array.length * idealBarWidth + paddingForLabels;
+    const containerW = Math.min(maxContainerWidth, Math.max(400, idealContainerWidth));
+    
+    // Calculate actual bar width
+    const barW = Math.max(minBarWidth, (containerW - paddingForLabels) / array.length);
     
     return { 
       maxValue: max, 
       containerWidth: containerW, 
-      barWidth: barW 
+      barWidth: barW,
+      shouldShowLabels: showLabels 
     };
   }, [array]);
 
@@ -96,26 +115,35 @@ export function SortingCanvas() {
       
       <CardContent>
         <div className="w-full overflow-x-auto">
-          <div 
-            className="flex items-end justify-center gap-1 mx-auto bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-lg p-4"
-            style={{ 
-              width: containerWidth,
-              minHeight: maxHeight + 80
-            }}
-          >
-            <AnimatePresence mode="wait">
+          {/* Info for large arrays */}
+          {array.length > 50 && (
+            <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700">
+              <p className="font-medium">💡 Large array ({array.length} elements)</p>
+              <p>Labels have been hidden for better readability. You can scroll horizontally to see the full array.</p>
+            </div>
+          )}
+          
+          <LayoutGroup>
+            <div 
+              className="flex items-end justify-center gap-1 mx-auto bg-gradient-to-b from-slate-50 to-slate-100 rounded-lg p-6"
+              style={{ 
+                width: containerWidth,
+                minHeight: shouldShowLabels ? maxHeight + 80 : maxHeight + 20
+              }}
+            >
               {array.map((element, index) => (
                 <ArrayBar
-                  key={`${element.index}-${element.value}`}
+                  key={`bar-${element.value}-${index}`}
                   element={element}
                   maxValue={maxValue}
                   maxHeight={maxHeight}
                   width={barWidth}
                   index={index}
+                  showLabels={shouldShowLabels}
                 />
               ))}
-            </AnimatePresence>
-          </div>
+            </div>
+          </LayoutGroup>
         </div>
         
         {/* Legend */}
@@ -144,4 +172,4 @@ export function SortingCanvas() {
       </CardContent>
     </Card>
   );
-}
+});

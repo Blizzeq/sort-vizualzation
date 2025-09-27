@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrayElement } from '@/types';
 
@@ -9,6 +10,7 @@ interface ArrayBarProps {
   maxHeight: number;
   width: number;
   index: number;
+  showLabels?: boolean;
 }
 
 
@@ -27,16 +29,22 @@ const getBarGradient = (state: ArrayElement['state']) => {
   }
 };
 
-export function ArrayBar({ element, maxValue, maxHeight, width, index }: ArrayBarProps) {
+export const ArrayBar = memo(function ArrayBar({ element, maxValue, maxHeight, width, index, showLabels = true }: ArrayBarProps) {
   const height = Math.max((element.value / maxValue) * maxHeight, 20);
-  const shouldShowValue = width > 25;
+  const shouldShowValue = showLabels && width > 20;
+  const shouldShowIndex = showLabels && width > 15;
 
   return (
     <motion.div
       className="flex flex-col items-center justify-end"
-      style={{ width: width, minHeight: maxHeight + 40 }}
+      style={{ 
+        width: width, 
+        minHeight: showLabels ? maxHeight + 40 : maxHeight + 10 
+      }}
+      layoutId={`bar-${element.value}-${index}`}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.8, opacity: 0 }}
       transition={{ 
         type: "spring",
         stiffness: 300,
@@ -48,6 +56,7 @@ export function ArrayBar({ element, maxValue, maxHeight, width, index }: ArrayBa
       {shouldShowValue && (
         <motion.div 
           className="text-xs text-center mb-1 font-mono"
+          layoutId={`value-${element.value}-${index}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.01 + 0.2 }}
@@ -60,28 +69,33 @@ export function ArrayBar({ element, maxValue, maxHeight, width, index }: ArrayBa
       <motion.div
         className={`bg-gradient-to-t ${getBarGradient(element.state)} rounded-t-md border border-white/20 shadow-lg`}
         style={{ 
-          width: Math.max(width - 4, 10),
-          minWidth: 10
+          width: Math.max(width - 2, 6),
+          minWidth: 6
         }}
+        layoutId={`bar-content-${element.value}-${index}`}
         animate={{ 
           height: height,
           scale: element.state === 'comparing' || element.state === 'swapping' ? 1.05 : 1
         }}
         transition={{ 
           height: { type: "spring", stiffness: 400, damping: 30 },
-          scale: { type: "spring", stiffness: 600, damping: 25 }
+          scale: { type: "spring", stiffness: 600, damping: 25 },
+          layout: { type: "spring", stiffness: 400, damping: 30 }
         }}
       />
       
       {/* Index label */}
-      <motion.div 
-        className="text-xs text-muted-foreground mt-1 font-mono"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: index * 0.01 + 0.3 }}
-      >
-        {element.index}
-      </motion.div>
+      {shouldShowIndex && (
+        <motion.div 
+          className="text-xs text-muted-foreground mt-1 font-mono"
+          layoutId={`index-${element.value}-${index}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: index * 0.01 + 0.3 }}
+        >
+          {index}
+        </motion.div>
+      )}
     </motion.div>
   );
-}
+});

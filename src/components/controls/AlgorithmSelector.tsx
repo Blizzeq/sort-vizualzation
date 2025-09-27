@@ -1,11 +1,12 @@
 'use client';
 
+import { memo } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useSortingStore } from '@/lib/store/sortingStore';
 import { ALGORITHM_INFO } from '@/lib/algorithms/types';
 import { AlgorithmType } from '@/types';
 
-export function AlgorithmSelector() {
+export const AlgorithmSelector = memo(function AlgorithmSelector() {
   const { algorithm, setAlgorithm, sortingState } = useSortingStore();
   const isDisabled = sortingState === 'sorting' || sortingState === 'paused';
 
@@ -17,7 +18,7 @@ export function AlgorithmSelector() {
         onValueChange={(value: AlgorithmType) => setAlgorithm(value)}
         disabled={isDisabled}
       >
-        <SelectTrigger className="w-[200px]">
+        <SelectTrigger className="w-full">
           <SelectValue placeholder="Select algorithm" />
         </SelectTrigger>
         <SelectContent>
@@ -35,4 +36,4 @@ export function AlgorithmSelector() {
       </Select>
     </div>
   );
-}
+});

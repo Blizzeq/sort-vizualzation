@@ -17,7 +17,7 @@ export function SpeedControl() {
         min={1}
         max={100}
         step={1}
-        className="w-[200px]"
+        className="w-full"
       />
       <div className="flex justify-between text-xs text-muted-foreground">
         <span>Slow</span>

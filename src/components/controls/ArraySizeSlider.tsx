@@ -19,8 +19,12 @@ export function ArraySizeSlider() {
         max={100}
         step={5}
         disabled={isDisabled}
-        className="w-[200px]"
+        className="w-full"
       />
+      <div className="flex justify-between text-xs text-muted-foreground">
+        <span>10</span>
+        <span>100</span>
+      </div>
     </div>
   );
 }

@@ -236,8 +236,14 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
         clearTimeout(animationId);
       }
       
+      // Ensure all elements are marked as sorted
+      const finalArray = result.value.map((element: ArrayElement) => ({
+        ...element,
+        state: 'sorted' as const
+      }));
+      
       set({ 
-        array: result.value,
+        array: finalArray,
         sortingState: 'completed',
         currentMessage: 'Sorting completed!',
         animationId: null

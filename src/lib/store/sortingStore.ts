@@ -23,6 +23,8 @@ interface SortingStore {
     fps: number;
     frameTime: number;
   };
+  realSpeedMode: boolean;
+  realExecutionTime: number;
   
   // Generator and animation
   sortingGenerator: SortingGenerator | null;
@@ -32,6 +34,7 @@ interface SortingStore {
   setAlgorithm: (algorithm: AlgorithmType) => void;
   setArraySize: (size: number) => void;
   setSpeed: (speed: number) => void;
+  toggleRealSpeedMode: () => void;
   generateNewArray: () => void;
   startSorting: () => void;
   pauseSorting: () => void;
@@ -75,6 +78,8 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     fps: 60,
     frameTime: 16.67,
   },
+  realSpeedMode: false,
+  realExecutionTime: 0,
   sortingGenerator: null,
   animationId: null,
 
@@ -98,6 +103,13 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     set({ speed });
   },
 
+  toggleRealSpeedMode: () => {
+    const state = get();
+    if (state.sortingState === 'idle' || state.sortingState === 'completed') {
+      set({ realSpeedMode: !state.realSpeedMode, realExecutionTime: 0 });
+    }
+  },
+
   generateNewArray: () => {
     const { arraySize } = get();
     const values = generateRandomArray(arraySize);
@@ -113,7 +125,7 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
   },
 
   startSorting: () => {
-    const { algorithm, originalArray, sortingState } = get();
+    const { algorithm, originalArray, sortingState, realSpeedMode } = get();
     
     if (sortingState !== 'idle' && sortingState !== 'completed') return;
     
@@ -122,51 +134,128 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
     set({ 
       sortingGenerator: generator,
       sortingState: 'sorting',
-      statistics: { ...get().statistics, timeElapsed: 0 }
+      statistics: { ...get().statistics, timeElapsed: 0 },
+      realExecutionTime: 0
     });
     
-    let lastTime = 0;
-    let frameCount = 0;
-    let fpsLastTime = 0;
-    
-    const animate = (currentTime: number) => {
-      const state = get();
-      if (state.sortingState === 'sorting') {
-        // Performance monitoring
-        frameCount++;
-        const frameTime = currentTime - lastTime;
-        if (fpsLastTime === 0) fpsLastTime = currentTime;
-        if (currentTime - fpsLastTime >= 1000) {
-          const fps = Math.round((frameCount * 1000) / (currentTime - fpsLastTime));
-          set({ 
-            performanceData: { 
-              fps, 
-              frameTime: Math.round(frameTime * 100) / 100 
-            } 
-          });
-          frameCount = 0;
-          fpsLastTime = currentTime;
-        }
+    if (realSpeedMode) {
+      // Real Speed Mode - execute without delays
+      const startTime = performance.now();
+      let stepCount = 0;
+      let lastResult;
+      
+      const executeRealSpeed = () => {
+        const batchSize = get().arraySize <= 30 ? 1000 : 50; // Execute more steps for smaller arrays
+        let stepsExecuted = 0;
         
-        // Dynamic speed calculation
-        const stepInterval = 1100 - state.speed * 10;
-        if (currentTime - lastTime >= stepInterval) {
-          state.executeNextStep();
-          lastTime = currentTime;
+        while (stepsExecuted < batchSize) {
+          const result = generator.next();
+          stepCount++;
           
-          // Check if state changed after executeNextStep
-          const newState = get();
-          if (newState.sortingState !== 'sorting') {
-            return; // Don't schedule next frame
+          if (result.done) {
+            // Sorting completed
+            const endTime = performance.now();
+            const realTime = Math.round(endTime - startTime);
+            
+            const finalArray = result.value.map((element: ArrayElement) => ({
+              ...element,
+              state: 'sorted' as const
+            }));
+            
+            set({ 
+              array: finalArray,
+              sortingState: 'completed',
+              currentMessage: 'Sorting completed!',
+              realExecutionTime: realTime,
+              currentStep: stepCount
+            });
+            return;
+          }
+          
+          lastResult = result.value;
+          stepsExecuted++;
+          
+          // Check if this is the final sorting step
+          if (result.value.message === 'Array is fully sorted!') {
+            const endTime = performance.now();
+            const realTime = Math.round(endTime - startTime);
+            
+            const finalArray = result.value.array.map((element: ArrayElement) => ({
+              ...element,
+              state: 'sorted' as const
+            }));
+            
+            set({ 
+              array: finalArray,
+              sortingState: 'completed',
+              currentMessage: result.value.message,
+              realExecutionTime: realTime,
+              currentStep: stepCount
+            });
+            return;
           }
         }
-        const animationId = requestAnimationFrame(animate);
-        set({ animationId });
-      }
-    };
-    
-    const animationId = requestAnimationFrame(animate);
-    set({ animationId });
+        
+        // Update UI with last result
+        if (lastResult) {
+          get().updateStatistics(lastResult);
+          set({ 
+            array: lastResult.array,
+            currentStep: stepCount,
+            currentMessage: lastResult.message
+          });
+        }
+        
+        // Continue in next frame
+        requestAnimationFrame(executeRealSpeed);
+      };
+      
+      executeRealSpeed();
+    } else {
+      // Normal animated mode
+      let lastTime = 0;
+      let frameCount = 0;
+      let fpsLastTime = 0;
+      
+      const animate = (currentTime: number) => {
+        const state = get();
+        if (state.sortingState === 'sorting') {
+          // Performance monitoring
+          frameCount++;
+          const frameTime = currentTime - lastTime;
+          if (fpsLastTime === 0) fpsLastTime = currentTime;
+          if (currentTime - fpsLastTime >= 1000) {
+            const fps = Math.round((frameCount * 1000) / (currentTime - fpsLastTime));
+            set({ 
+              performanceData: { 
+                fps, 
+                frameTime: Math.round(frameTime * 100) / 100 
+              } 
+            });
+            frameCount = 0;
+            fpsLastTime = currentTime;
+          }
+          
+          // Dynamic speed calculation
+          const stepInterval = 1100 - state.speed * 10;
+          if (currentTime - lastTime >= stepInterval) {
+            state.executeNextStep();
+            lastTime = currentTime;
+            
+            // Check if state changed after executeNextStep
+            const newState = get();
+            if (newState.sortingState !== 'sorting') {
+              return; // Don't schedule next frame
+            }
+          }
+          const animationId = requestAnimationFrame(animate);
+          set({ animationId });
+        }
+      };
+      
+      const animationId = requestAnimationFrame(animate);
+      set({ animationId });
+    }
   },
 
   pauseSorting: () => {

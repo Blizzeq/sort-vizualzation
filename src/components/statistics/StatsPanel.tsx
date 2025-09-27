@@ -14,7 +14,9 @@ export function StatsPanel() {
     arraySize, 
     currentStep, 
     totalSteps,
-    sortingState 
+    sortingState,
+    realSpeedMode,
+    realExecutionTime
   } = useSortingStore();
 
   const algorithmInfo = ALGORITHM_INFO[algorithm];
@@ -104,9 +106,9 @@ export function StatsPanel() {
           
           <StatCard
             icon={Clock}
-            title="Time Elapsed"
-            value={formatTime(statistics.timeElapsed)}
-            subtitle="Visualization time"
+            title={realSpeedMode ? "Real Execution Time" : "Time Elapsed"}
+            value={realSpeedMode && realExecutionTime > 0 ? `${realExecutionTime}ms` : formatTime(statistics.timeElapsed)}
+            subtitle={realSpeedMode ? "Actual algorithm speed" : "Visualization time"}
           />
         </div>
 

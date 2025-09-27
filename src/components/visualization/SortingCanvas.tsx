@@ -133,7 +133,7 @@ export const SortingCanvas = memo(function SortingCanvas() {
               className="flex items-end justify-center gap-1 mx-auto bg-gradient-to-b from-slate-50 to-slate-100 rounded-lg p-6"
               style={{ 
                 width: containerWidth,
-                minHeight: shouldShowLabels ? maxHeight + 80 : maxHeight + 20
+                height: shouldShowLabels ? maxHeight + 80 : maxHeight + 20
               }}
             >
               {array.map((element, index) => (

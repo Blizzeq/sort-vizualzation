@@ -40,12 +40,15 @@ const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, widt
   const animationDelay = isLargeArray ? 0 : index * 0.005;
   const shouldUseLayout = !isLargeArray;
 
+  const barHeight = element.state === 'comparing' || element.state === 'swapping' ? height * 1.05 : height;
+  const labelTopPosition = maxHeight - barHeight - 16;
+
   return (
     <motion.div
-      className="flex flex-col items-center justify-end"
+      className="relative flex flex-col items-center justify-end"
       style={{ 
         width: width, 
-        minHeight: showLabels ? maxHeight + 40 : maxHeight + 10 
+        height: showLabels ? maxHeight + 40 : maxHeight + 10 
       }}
       layoutId={shouldUseLayout ? `bar-${element.value}-${index}` : undefined}
       initial={isLargeArray ? { opacity: 0 } : { scale: 0.8, opacity: 0 }}
@@ -61,20 +64,31 @@ const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, widt
         }
       }
     >
-      {/* Value label */}
+      {/* Value label - positioned just above bar */}
       {shouldShowValue && (
         <motion.div 
-          className="text-xs text-center mb-1 font-mono"
-          layoutId={shouldUseLayout ? `value-${element.value}-${index}` : undefined}
+          className="absolute text-xs text-center font-mono"
+          style={{ 
+            bottom: barHeight + 2 + 'px',
+            left: '50%',
+            transform: 'translateX(-50%)'
+          }}
+          layoutId={undefined}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: animationDelay + 0.1, duration: isLargeArray ? 0.15 : 0.3 }}
+          animate={{ 
+            opacity: 1,
+            bottom: barHeight + 2 + 'px'
+          }}
+          transition={{ 
+            opacity: { delay: animationDelay + 0.1, duration: isLargeArray ? 0.15 : 0.3 },
+            bottom: isLargeArray ? { duration: 0.3 } : { type: "spring", stiffness: 400, damping: 30 }
+          }}
         >
           {element.value}
         </motion.div>
       )}
       
-      {/* Bar */}
+      {/* Bar - grows from bottom up */}
       <motion.div
         className={`bg-gradient-to-t ${getBarGradient(element.state)} rounded-t-md border border-white/20 shadow-lg`}
         style={{ 
@@ -83,26 +97,24 @@ const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, widt
         }}
         layoutId={shouldUseLayout ? `bar-content-${element.value}-${index}` : undefined}
         animate={{ 
-          height: height,
-          scale: element.state === 'comparing' || element.state === 'swapping' ? 1.05 : 1
+          height: barHeight
         }}
         transition={isLargeArray ? 
           { 
-            height: { duration: 0.3 },
-            scale: { duration: 0.2 }
+            height: { duration: 0.3 }
           } :
           { 
             height: { type: "spring", stiffness: 400, damping: 30 },
-            scale: { type: "spring", stiffness: 600, damping: 25 },
             layout: { type: "spring", stiffness: 400, damping: 30 }
           }
         }
       />
       
-      {/* Index label */}
+      {/* Index label - positioned absolutely at bottom */}
       {shouldShowIndex && (
         <motion.div 
-          className="text-xs text-muted-foreground mt-1 font-mono"
+          className="absolute bottom-0 text-xs text-muted-foreground font-mono"
+          style={{ bottom: '2px' }}
           layoutId={shouldUseLayout ? `index-${element.value}-${index}` : undefined}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

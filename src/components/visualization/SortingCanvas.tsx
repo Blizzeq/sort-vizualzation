@@ -133,7 +133,7 @@ export const SortingCanvas = memo(function SortingCanvas() {
             >
               {array.map((element, index) => (
                 <ArrayBar
-                  key={`bar-${element.value}-${index}-${sortingState}`}
+                  key={`bar-${element.value}-${index}`}
                   element={element}
                   maxValue={maxValue}
                   maxHeight={maxHeight}

@@ -116,6 +116,11 @@ const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, widt
 };
 
 export const ArrayBar = memo(ArrayBarComponent, (prevProps, nextProps) => {
+  // Always re-render if state changed to 'sorted' to ensure completion colors show
+  if (nextProps.element.state === 'sorted' && prevProps.element.state !== 'sorted') {
+    return false; // Force re-render
+  }
+  
   return !(
     prevProps.element.state === nextProps.element.state &&
     prevProps.element.value === nextProps.element.value &&

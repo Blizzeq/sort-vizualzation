@@ -118,8 +118,8 @@ export function AlgorithmShowcase() {
             </div>
           </div>
 
-          {/* Content container with natural height */}
-          <div className="min-h-[320px]">
+          {/* Content container with fixed height */}
+          <div className="h-[320px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentAlgorithm}
@@ -135,7 +135,7 @@ export function AlgorithmShowcase() {
                 </div>
 
                 {/* Algorithm Description */}
-                <div>
+                <div className="h-[48px] flex items-center">
                   <p className="text-gray-700 leading-relaxed text-base">
                     {currentInfo.description}
                   </p>

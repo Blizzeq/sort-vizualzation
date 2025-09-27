@@ -20,7 +20,7 @@ export const ArraySizeSlider = memo(function ArraySizeSlider() {
         max={50}
         step={5}
         disabled={isDisabled}
-        className="w-full"
+        className="w-full [&>span:first-child]:bg-blue-200 [&>span:first-child]:h-2 [&_[role=slider]]:border-blue-400 [&_[role=slider]]:bg-white [&_[role=slider]]:ring-blue-500"
       />
       <div className="flex justify-between text-xs text-muted-foreground">
         <span>10</span>

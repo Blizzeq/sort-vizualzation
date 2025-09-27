@@ -1,15 +1,60 @@
 'use client';
 
-import { useMemo, memo } from 'react';
+import { useMemo, memo, useCallback } from 'react';
 import { motion, LayoutGroup } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { useSortingStore } from '@/lib/store/sortingStore';
 import { ArrayBar } from './ArrayBar';
 import { ALGORITHM_INFO } from '@/lib/algorithms/types';
+import { AlgorithmSelector } from '@/components/controls/AlgorithmSelector';
+import { ArraySizeSlider } from '@/components/controls/ArraySizeSlider';
+import { SpeedControl } from '@/components/controls/SpeedControl';
+import { Play, Pause, RotateCcw, Shuffle, SkipForward, Database, Zap } from 'lucide-react';
 
 export const SortingCanvas = memo(function SortingCanvas() {
-  const { array, algorithm, sortingState, currentMessage } = useSortingStore();
+  const { 
+    array, 
+    algorithm, 
+    sortingState, 
+    currentMessage,
+    startSorting,
+    pauseSorting,
+    resumeSorting,
+    resetSorting,
+    generateNewArray,
+    nextStep
+  } = useSortingStore();
+
+  const handlePlayPause = useCallback(() => {
+    if (sortingState === 'idle' || sortingState === 'completed') {
+      startSorting();
+    } else if (sortingState === 'sorting') {
+      pauseSorting();
+    } else if (sortingState === 'paused') {
+      resumeSorting();
+    }
+  }, [sortingState, startSorting, pauseSorting, resumeSorting]);
+
+  const playButtonIcon = useMemo(() => {
+    if (sortingState === 'sorting') return <Pause className="w-4 h-4" />;
+    return <Play className="w-4 h-4" />;
+  }, [sortingState]);
+
+  const playButtonText = useMemo(() => {
+    switch (sortingState) {
+      case 'idle':
+      case 'completed':
+        return 'Start Sorting';
+      case 'sorting':
+        return 'Pause';
+      case 'paused':
+        return 'Resume';
+      default:
+        return 'Start';
+    }
+  }, [sortingState]);
 
   const { maxValue, containerWidth, barWidth, shouldShowLabels } = useMemo(() => {
     if (array.length === 0) return { maxValue: 1, containerWidth: 800, barWidth: 20, shouldShowLabels: true };
@@ -106,9 +151,88 @@ export const SortingCanvas = memo(function SortingCanvas() {
           </div>
         </div>
         
+        {/* Control Panel integrated */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-4">
+          {/* Data Configuration Group */}
+          <div className="bg-blue-50/50 border border-blue-200 rounded-lg p-4 flex flex-col h-full">
+            <div className="text-sm flex items-center gap-1 text-blue-700 mb-3 font-medium">
+              <Database className="w-4 h-4" />
+              Data Configuration
+            </div>
+            <div className="flex-1 flex flex-col justify-between space-y-4">
+              <AlgorithmSelector />
+              <ArraySizeSlider />
+            </div>
+          </div>
+
+          {/* Animation Control Group */}
+          <div className="bg-purple-50/50 border border-purple-200 rounded-lg p-4 flex flex-col h-full">
+            <div className="text-sm flex items-center gap-1 text-purple-700 mb-3 font-medium">
+              <Zap className="w-4 h-4" />
+              Animation Control
+            </div>
+            <div className="flex-1 flex flex-col justify-between space-y-4">
+              <SpeedControl />
+              <Button
+                onClick={nextStep}
+                variant="outline"
+                size="sm"
+                disabled={sortingState !== 'paused'}
+                className="w-full flex items-center gap-1 text-sm text-purple-700 border-purple-300 hover:bg-purple-50 h-9"
+              >
+                <SkipForward className="w-4 h-4" />
+                Next Step
+              </Button>
+            </div>
+          </div>
+
+          {/* Action Control Group */}
+          <div className="bg-green-50/50 border border-green-200 rounded-lg p-4 flex flex-col h-full">
+            <div className="text-sm flex items-center gap-1 text-green-700 mb-3 font-medium">
+              <Play className="w-4 h-4" />
+              Actions
+            </div>
+            <div className="flex-1 flex flex-col justify-between space-y-4">
+              <Button
+                onClick={handlePlayPause}
+                variant="default"
+                size="sm"
+                className="w-full flex items-center gap-1 bg-green-600 hover:bg-green-700 h-10 text-sm font-medium"
+              >
+                {playButtonIcon}
+                {playButtonText}
+              </Button>
+
+              <div className="grid grid-cols-2 gap-2">
+                <Button
+                  onClick={resetSorting}
+                  variant="outline"
+                  size="sm"
+                  disabled={sortingState === 'idle'}
+                  className="flex items-center gap-1 text-sm text-orange-700 border-orange-300 hover:bg-orange-50 h-9"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                  Reset
+                </Button>
+
+                <Button
+                  onClick={generateNewArray}
+                  variant="outline"
+                  size="sm"
+                  disabled={sortingState === 'sorting' || sortingState === 'paused'}
+                  className="flex items-center gap-1 text-sm text-blue-700 border-blue-300 hover:bg-blue-50 h-9"
+                >
+                  <Shuffle className="w-4 h-4" />
+                  New Array
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* Current action message */}
         <motion.div 
-          className="text-sm text-muted-foreground font-mono p-2 bg-muted rounded-md"
+          className="text-sm text-muted-foreground font-mono p-2 bg-muted rounded-md mt-4"
           key={currentMessage}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}

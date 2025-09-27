@@ -1,6 +1,5 @@
 'use client';
 
-import { ControlPanel } from '@/components/controls/ControlPanel';
 import { SortingCanvas } from '@/components/visualization/SortingCanvas';
 import { StatsPanel } from '@/components/statistics/StatsPanel';
 import { AlgorithmShowcase } from '@/components/AlgorithmShowcase';
@@ -94,10 +93,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {/* Controls */}
-          <ControlPanel />
-          
-          {/* Visualization */}
+          {/* Visualization with integrated controls */}
           <SortingCanvas />
           
           {/* Statistics */}

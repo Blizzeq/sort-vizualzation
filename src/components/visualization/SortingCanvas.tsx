@@ -19,7 +19,6 @@ export const SortingCanvas = memo(function SortingCanvas() {
     algorithm, 
     sortingState, 
     currentMessage,
-    realSpeedMode,
     startSorting,
     pauseSorting,
     resumeSorting,

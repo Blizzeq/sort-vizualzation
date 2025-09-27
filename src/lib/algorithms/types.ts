@@ -55,5 +55,49 @@ export const ALGORITHM_INFO: Record<AlgorithmType, AlgorithmInfo> = {
     spaceComplexity: 'O(n)',
     stable: true,
     description: 'Divides the array into halves, recursively sorts them, and merges the sorted halves back together.'
+  },
+  heap: {
+    name: 'Heap Sort',
+    timeComplexity: {
+      best: 'O(n log n)',
+      average: 'O(n log n)',
+      worst: 'O(n log n)'
+    },
+    spaceComplexity: 'O(1)',
+    stable: false,
+    description: 'Builds a max heap from the array, then repeatedly extracts the maximum element to create sorted array.'
+  },
+  shell: {
+    name: 'Shell Sort',
+    timeComplexity: {
+      best: 'O(n log n)',
+      average: 'O(n log n)',
+      worst: 'O(n²)'
+    },
+    spaceComplexity: 'O(1)',
+    stable: false,
+    description: 'Improves insertion sort by comparing elements separated by larger gaps, gradually reducing to insertion sort.'
+  },
+  counting: {
+    name: 'Counting Sort',
+    timeComplexity: {
+      best: 'O(n + k)',
+      average: 'O(n + k)',
+      worst: 'O(n + k)'
+    },
+    spaceComplexity: 'O(k)',
+    stable: true,
+    description: 'Counts occurrences of each distinct element, then uses these counts to place elements in sorted order.'
+  },
+  radix: {
+    name: 'Radix Sort',
+    timeComplexity: {
+      best: 'O(nk)',
+      average: 'O(nk)',
+      worst: 'O(nk)'
+    },
+    spaceComplexity: 'O(n + k)',
+    stable: true,
+    description: 'Sorts elements digit by digit, starting from least significant to most significant digit.'
   }
 };

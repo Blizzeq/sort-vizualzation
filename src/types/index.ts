@@ -3,7 +3,11 @@ export type AlgorithmType =
   | 'quick'
   | 'merge'
   | 'insertion'
-  | 'selection';
+  | 'selection'
+  | 'heap'
+  | 'shell'
+  | 'counting'
+  | 'radix';
 
 export type SortingState = 
   | 'idle'

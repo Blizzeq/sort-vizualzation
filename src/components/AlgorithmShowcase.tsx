@@ -9,11 +9,11 @@ import { ALGORITHM_INFO } from '@/lib/algorithms/types';
 import { AlgorithmType } from '@/types';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const algorithms: AlgorithmType[] = ['bubble', 'insertion', 'selection', 'quick', 'merge'];
+const algorithms: AlgorithmType[] = ['bubble', 'insertion', 'selection', 'quick', 'merge', 'heap', 'shell', 'counting', 'radix'];
 
 export function AlgorithmShowcase() {
   const [currentAlgorithm, setCurrentAlgorithm] = useState<AlgorithmType>('bubble');
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isAutoPlay] = useState(true);
   const [intervalDuration, setIntervalDuration] = useState(4000);
 
   useEffect(() => {
@@ -209,6 +209,24 @@ function MiniVisualization({ algorithm }: { algorithm: AlgorithmType }) {
           break;
         case 'merge':
           setActiveIndices(step % 2 === 0 ? [0, 1, 2, 3, 4, 5] : [6, 7, 8, 9, 10, 11]);
+          break;
+        case 'heap':
+          // Show heap building pattern - parent and children
+          const heapIndex = step % 6;
+          setActiveIndices([heapIndex, heapIndex * 2 + 1, heapIndex * 2 + 2].filter(i => i < 12));
+          break;
+        case 'shell':
+          // Show gap-based comparisons
+          const gap = Math.max(1, 6 - Math.floor(step / 3));
+          setActiveIndices([step % (12 - gap), (step % (12 - gap)) + gap].filter(i => i < 12));
+          break;
+        case 'counting':
+          // Show counting/positioning pattern
+          setActiveIndices([step % 12]);
+          break;
+        case 'radix':
+          // Show digit-based grouping
+          setActiveIndices(step % 2 === 0 ? [0, 3, 6, 9] : [1, 4, 7, 10]);
           break;
       }
       step++;

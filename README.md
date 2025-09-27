@@ -10,7 +10,7 @@ A sophisticated web application that brings sorting algorithms to life through i
 ## Visual Showcase
 
 ### Interactive Algorithm Selection
-Explore five fundamental sorting algorithms with detailed complexity information and visual explanations.
+Explore nine fundamental sorting algorithms with detailed complexity information and visual explanations.
 
 ![Algorithm Selection](screenshots/Screenshot%202025-09-27%20at%2016.56.38.png)
 
@@ -32,7 +32,7 @@ Track detailed statistics including comparisons, swaps, array accesses, and exec
 ## Features
 
 ### Interactive Visualization
-- **5 Sorting Algorithms**: Bubble Sort, Insertion Sort, Selection Sort, Quick Sort, and Merge Sort
+- **9 Sorting Algorithms**: Bubble Sort, Insertion Sort, Selection Sort, Quick Sort, Merge Sort, Heap Sort, Shell Sort, Counting Sort, and Radix Sort
 - **Color-Coded States**: Visual indicators for comparing, swapping, pivot, and sorted elements
 - **Smooth Animations**: Powered by Framer Motion for fluid transitions
 - **Step-by-Step Control**: Pause and advance through sorting manually
@@ -52,6 +52,10 @@ Track detailed statistics including comparisons, swaps, array accesses, and exec
 | Selection Sort | O(n²) | O(n²) | O(n²) | O(1) | No |
 | Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) | No |
 | Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
+| Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | No |
+| Shell Sort | O(n log n) | O(n log n) | O(n²) | O(1) | No |
+| Counting Sort | O(n + k) | O(n + k) | O(n + k) | O(k) | Yes |
+| Radix Sort | O(nk) | O(nk) | O(nk) | O(n + k) | Yes |
 
 ### Array Size Optimization
 - **Small Arrays (10-25 elements)**: Full visualization with labels and smooth animations

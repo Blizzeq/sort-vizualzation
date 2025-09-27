@@ -6,6 +6,10 @@ import { insertionSort } from '@/lib/algorithms/insertionSort';
 import { selectionSort } from '@/lib/algorithms/selectionSort';
 import { quickSort } from '@/lib/algorithms/quickSort';
 import { mergeSort } from '@/lib/algorithms/mergeSort';
+import { heapSort } from '@/lib/algorithms/heapSort';
+import { shellSort } from '@/lib/algorithms/shellSort';
+import { countingSort } from '@/lib/algorithms/countingSort';
+import { radixSort } from '@/lib/algorithms/radixSort';
 
 interface SortingStore {
   // State
@@ -55,6 +59,10 @@ const ALGORITHMS = {
   selection: selectionSort,
   quick: quickSort,
   merge: mergeSort,
+  heap: heapSort,
+  shell: shellSort,
+  counting: countingSort,
+  radix: radixSort,
 };
 
 export const useSortingStore = create<SortingStore>((set, get) => ({

@@ -142,7 +142,7 @@ export const useSortingStore = create<SortingStore>((set, get) => ({
       // Real Speed Mode - execute without delays
       const startTime = performance.now();
       let stepCount = 0;
-      let lastResult;
+      let lastResult: SortingStep;
       
       const executeRealSpeed = () => {
         const batchSize = get().arraySize <= 30 ? 1000 : 50; // Execute more steps for smaller arrays

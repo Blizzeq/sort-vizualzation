@@ -7,7 +7,6 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
     state: 'normal'
   }));
 
-  // First element is considered sorted
   array[0].state = 'sorted';
   yield {
     array: [...array],
@@ -20,7 +19,6 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
     const key = array[i].value;
     let j = i - 1;
 
-    // Highlight the current element being inserted
     array[i].state = 'pivot';
     yield {
       array: [...array],
@@ -29,7 +27,6 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
       message: `Inserting element ${key} into sorted portion`
     };
 
-    // Find the correct position for the key
     while (j >= 0) {
       array[j].state = 'comparing';
       array[i].state = 'comparing';
@@ -43,11 +40,9 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
 
       if (array[j].value <= key) {
         array[j].state = 'sorted';
-        array[i].state = 'normal'; // Reset the comparing state
+        array[i].state = 'normal';
         break;
       }
-
-      // Shift element to the right
       array[j].state = 'swapping';
       array[j + 1].state = 'swapping';
 
@@ -58,22 +53,18 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
         message: `Shifting ${array[j].value} to position ${j + 1}`
       };
 
-      // Only copy the value, not the entire element with its state
-      array[j + 1].value = array[j].value;
+        array[j + 1].value = array[j].value;
       array[j + 1].index = j + 1;
-      array[j].state = 'normal'; // Reset this position as it will be overwritten
+      array[j].state = 'normal';
       j--;
     }
 
-    // Insert the key in its correct position
     array[j + 1] = { value: key, index: j + 1, state: 'sorted' };
     
-    // Make sure the original position i is also reset if it wasn't handled above
     if (array[i] && array[i].state !== 'sorted') {
       array[i].state = 'normal';
     }
 
-    // Clean up any temporary states and mark all elements up to i as sorted
     for (let k = 0; k <= i; k++) {
       if (array[k].state !== 'sorted') {
         array[k].state = 'sorted';
@@ -87,7 +78,6 @@ export function* insertionSort(initialArray: number[]): SortingGenerator {
     };
   }
 
-  // Ensure all elements are marked as sorted in the final state
   for (let k = 0; k < array.length; k++) {
     array[k].state = 'sorted';
   }

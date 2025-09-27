@@ -41,7 +41,6 @@ const ArrayBarComponent = function ArrayBar({ element, maxValue, maxHeight, widt
   const shouldUseLayout = !isLargeArray;
 
   const barHeight = element.state === 'comparing' || element.state === 'swapping' ? height * 1.05 : height;
-  const labelTopPosition = maxHeight - barHeight - 16;
 
   return (
     <motion.div
